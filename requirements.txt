@@ -1,0 +1,3 @@
+streamlit #for ui
+python-dotenv #to load seeded credential in main file
+google-generativeai
