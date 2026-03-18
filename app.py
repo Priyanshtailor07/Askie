@@ -1,6 +1,11 @@
+try:
+    from dotenv import load_dotenv
 
-from dotenv import load_dotenv
-load_dotenv()
+    load_dotenv()
+except Exception:
+    # In deployment, environment variables may be provided directly.
+    # Skip .env loading if python-dotenv is unavailable or shadowed.
+    pass
 import streamlit as st 
 import os 
 import google.generativeai as genai 
